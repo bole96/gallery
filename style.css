@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.wrapper .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 100px;
+    padding: 50px;
+}
+
+.wrapper .box-container .box {
+    background-color: #6ba2d9;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 7%),
+        0 2px 4px rgb(0 0 0 / 7%),
+        0 4px 8px rgb(0 0 0 / 7%),
+        0 8px 16px rgb(0 0 0 / 7%),
+        0 16px 32px rgb(0 0 0 / 7%),
+        0 32px 64px rgb(0 0 0 / 7%);
+}
+
+.wrapper .box-container .box img {
+    width: 100%;
+}
+
+.wrapper .box-container .box .title-container {
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.wrapper .box-container .box .title-container .img-title {
+    text-align: center;
+    margin: 0;
+}
+
+.wrapper .heading-container,
+.wrapper .text-container {
+    padding: 0 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper .box-container {
+        grid-template-columns: repeat(5, 5fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper .box-container {
+        grid-template-columns: repeat(3, 3fr);
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .wrapper .box-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
